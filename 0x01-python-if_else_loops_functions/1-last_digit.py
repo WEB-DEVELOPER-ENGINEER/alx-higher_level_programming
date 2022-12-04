@@ -9,9 +9,9 @@ for i, j in enumerate(n):
     elif i > 0 and n[0] != '-':
         x = int(n[i])
 if x > 5:
-    print("Last digit of {} is {} and is greater than 5".format(number, x))
+    print("Last digit of {} is {} and is greater than 5".format(n, x))
 elif x == 0:
-    print("Last digit of {} is {} and is 0".format(number, x))
+    print("Last digit of {} is {} and is 0".format(n, x))
 elif x < 6 and x != 0:
-    print("Last digit of {} is {} and is".format(number, x), end="")
+    print("Last digit of {} is {} and is".format(n, x), end="")
     print(" less than 6 and not 0")
