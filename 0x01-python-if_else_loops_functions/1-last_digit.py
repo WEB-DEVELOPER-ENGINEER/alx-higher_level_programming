@@ -8,8 +8,8 @@ for i, j in enumerate(n):
     elif i > 0 and n[0] != '-':
         x = int(n[i])
 if x > 5:
-    print("Last digit of {} is {:f} and is greater than 5".format(number, x))
+    print("Last digit of {:d} is {:d} and is greater than 5".format(number, x))
 elif x == 0:
-    print("Last digit of {} is {:f} and is 0".format(number, x))
+    print("Last digit of {:d} is {:d} and is 0".format(number, x))
 elif x < 6 and x != 0:
-    print(f"Last digit of {number} is {x} and is less than 6 and not 0")
+    print(f"Last digit of {number:d} is {x:d} and is less than 6 and not 0")
