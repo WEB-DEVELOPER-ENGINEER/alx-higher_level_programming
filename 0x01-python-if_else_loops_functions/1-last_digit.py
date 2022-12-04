@@ -1,18 +1,18 @@
 #!/usr/bin/python3
 import random
-x = 0
 number = random.randint(-10000, 10000)
-n = str(number)
-for i, j in enumerate(n):
-    if i > 0 and n[0] == '-':
-        x = int(n[i])
-        x = -abs(x)
-    elif i > 0 and n[0] != '-':
-        x = int(n[i])
-if x > 5:
-    print("Last digit of {} is {} and is greater than 5".format(n, x))
-elif x == 0:
-    print("Last digit of {} is {} and is 0".format(n, x))
-elif x < 6 and x != 0:
-    print("Last digit of {} is {} and is".format(n, x), end="")
-    print(" less than 6 and not 0")
+exe = 0
+if number < 0:
+    number *= -1
+    exe = 1
+    lastd = number % 10
+    if exe == 1:
+        number *= -1
+        lastd *= -1
+        print("Last digit of {:d} is ".format(number), end="")
+        if lastd > 5:
+            print("{:d} and is greater than 5".format(lastd))
+        elif lastd == 0:
+            print("{:d} and is 0".format(lastd))
+        else:
+            print("{:d} and is less than 6 and not 0".format(lastd))
