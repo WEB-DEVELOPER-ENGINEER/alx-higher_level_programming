@@ -3,6 +3,7 @@
 This class represents a square
 '''
 
+
 class Square:
     '''Class Square
     '''
