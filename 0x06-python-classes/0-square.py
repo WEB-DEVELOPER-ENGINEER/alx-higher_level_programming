@@ -3,6 +3,6 @@
 
 
 class Square:
-    '''Represents a square
+    '''Class Square
     '''
     pass
