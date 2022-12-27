@@ -12,7 +12,8 @@ class Square:
     '''
     def __init__(self, size=0, position=(0, 0)):
         if type(position) != tuple or len(position) != 2 or \
-          not all([type(i) == int for i in position]):
+          not all([type(i) == int for i in position]) or \
+          not all([i >= 0 for i in position]):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__size = size
         self.__position = position
