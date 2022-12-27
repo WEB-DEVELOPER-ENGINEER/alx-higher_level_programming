@@ -11,8 +11,7 @@ class Square:
     Also defines position using a tuple, which defaults (0, 0).
     '''
     def __init__(self, size=0, position=(0, 0)):
-        if type(position) != tuple or len(position) != 2 or position[0] != int \
-                or position[1] != int or position[0] < 0 or position[1] < 0:
+        if type(position) != tuple:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__size = size
         self.__position = position
