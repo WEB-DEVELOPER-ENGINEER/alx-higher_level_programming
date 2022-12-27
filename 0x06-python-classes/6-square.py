@@ -1,11 +1,14 @@
 #!/usr/bin/python3
 '''
-A class Square that defines a square
+A class Square that defines a square.
+This module provides a simple Square class with initialize size.
+Attribute position which takes a default (0, 0) tuple.
 '''
 
 
 class Square:
     '''A class that defines a square
+    Also defines position using a tuple, which defaults (0, 0).
     '''
     def __init__(self, size=0, position=(0, 0)):
         self.__size = size
