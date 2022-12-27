@@ -14,7 +14,7 @@ my_square_3.my_print()
 print("--")
 try:
     my_square_4 = Square(3)
-    my_square_4.position = (-1, 5)
+    my_square_4.position = (0, 5)
 except Exception as e:
     print(e)
 
