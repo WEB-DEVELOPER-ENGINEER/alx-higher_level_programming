@@ -8,8 +8,8 @@ This module provides a simple Rectangle class with attribute width and height.
 class Rectangle:
     """A Rectangle class with attributes width and height"""
     def __init__(self, width=0, height=0):
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def height(self):
