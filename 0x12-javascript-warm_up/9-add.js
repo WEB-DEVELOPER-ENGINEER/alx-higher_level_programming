@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const args = process.argv;
-let A = parseInt(args[2]);
-let B = parseInt(args[3]);
+const A = parseInt(args[2]);
+const B = parseInt(args[3]);
 if (isNaN(A) || isNaN(B)) {
   console.log('NaN');
 } else {
