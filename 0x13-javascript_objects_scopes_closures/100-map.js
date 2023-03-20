@@ -1,7 +1,7 @@
-#!/usr/bin/node
-const list = require('./100-data.js').list;
-const map1 = list.map(function (x) {
-  return (x * list.indexOf(x));
+const array = require('./100-data').list;
+console.log(array);
+let cont = 0;
+const map1 = array.map(function (x) {
+  return (x * cont++);
 });
-console.log(list);
 console.log(map1);
