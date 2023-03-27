@@ -14,12 +14,12 @@ if __name__ == "__main__":
     """
 
     db_uri = 'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
-        argv[1], argv[2], argv[3], pool_pre_ping=True)
+        argv[1], argv[2], argv[3])
     engine = create_engine(db_uri)
     Session = sessionmaker(bind=engine)
     session = Session()
     lou_state = State(name='Louisiana')
     session.add(lou_state)
     session.commit()
-    session.close()
     print('{}'.format(lou_state.id))
+    session.close()
