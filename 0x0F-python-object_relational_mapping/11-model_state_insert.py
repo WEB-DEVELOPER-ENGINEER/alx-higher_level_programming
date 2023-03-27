@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Adds a new State object to the database `hbtn_0e_6_usa`
+Adds a new State  to the database `hbtn_0e_6_usa`
 """
 
 from sys import argv
@@ -10,17 +10,14 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
     """
-    Access to the database and get a state
-    from the database.
+    Access the database and add a state
     """
 
     db_uri = 'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
         argv[1], argv[2], argv[3])
     engine = create_engine(db_uri)
     Session = sessionmaker(bind=engine)
-
     session = Session()
-
     lou_state = State(name='Louisiana')
     session.add(lou_state)
     session.commit()
