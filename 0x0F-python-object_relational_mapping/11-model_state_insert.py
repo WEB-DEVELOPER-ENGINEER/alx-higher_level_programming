@@ -18,7 +18,7 @@ if __name__ == "__main__":
     engine = create_engine(db_uri)
     Session = sessionmaker(bind=engine)
     session = Session()
-    lou_state = State(name='Louisiana')
+    lou_state = State(name='Louisiana', id=NULL)
     session.add(lou_state)
     session.commit()
     print('{}'.format(lou_state.id))
