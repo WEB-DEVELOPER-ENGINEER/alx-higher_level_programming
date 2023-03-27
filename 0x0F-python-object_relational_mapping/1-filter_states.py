@@ -3,7 +3,7 @@ import MySQLdb
 from sys import argv
 
 '''
-lists all states with starting name with N
+lists all states starting with N
 from the database hbtn_0e_0_usa
 '''
 if __name__ == "__main__":
