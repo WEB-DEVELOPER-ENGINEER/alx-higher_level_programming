@@ -19,3 +19,7 @@ Traceback (most recent call last):
 TypeError: a must be an integer
 >>> add_integer(5.25, 5.0)
 10
+>>> add_integer(None, 5)
+Traceback (most recent call last):
+        Ellipsis
+TypeError: a must be an integer
