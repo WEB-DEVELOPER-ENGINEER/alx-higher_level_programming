@@ -1,0 +1,25 @@
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>> matrix_divided([[2.5, 5.5, 10.5]], 2)
+[[1.25, 2.75, 5.25]]
+>>> matrix_divided([[2.5, 5.5, 10.5], [3.5, 4.5, 6.5]], 2)
+[[1.25, 2.75, 5.25], [1.75, 2.25, 3.25]]
+>>> matrix_divided([[2.5, 5.5, 10.5], [3.5, 4.5, 6.5]], 'str')
+Traceback (most recent call last):
+	Ellipsis
+TypeError: div must be a number
+>>> matrix_divided([[2.5, 5.5, 10.5], [3.5, 4.5, 6.5]], 0)
+Traceback (most recent call last):
+        Ellipsis
+ZeroDivisionError: division by zero
+>>> matrix_divided([[2.5, 5.5, 10.5], [3.5, 4.5, 6.5]])
+Traceback (most recent call last):
+        Ellipsis
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+>>> matrix_divided([], 9)
+Traceback (most recent call last):
+	Ellipsis
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix_divided([[1, 2, 3], [4, 5, "p"]], 2)
+Traceback (most recent call last):
+	Ellipsis
+TypeError: matrix must be a matrix (list of lists) of integers/floats
