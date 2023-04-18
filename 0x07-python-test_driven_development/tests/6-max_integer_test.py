@@ -64,6 +64,13 @@ class TestMaxInteger(unittest.TestCase):
         '''
         self.assertEqual(max_integer([2, 2]), 2)
 
+    def test_integer(self):
+        '''
+            Test for when passing an integer
+        '''
+        with self.assertRaises(TypeError):
+            max_integer(5)
+
 
 if __name__ == "__main__":
     unittest.main()
