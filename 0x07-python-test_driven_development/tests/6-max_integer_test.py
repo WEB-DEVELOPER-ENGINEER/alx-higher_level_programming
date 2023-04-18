@@ -83,6 +83,12 @@ class TestMaxInteger(unittest.TestCase):
         '''
         self.assertEqual(max_integer([100, 50, 20, 200]), 200)
 
+    def test_single_negative(self):
+        '''
+            Test for when there is one negative number
+        '''
+        self.assertEqual(max_integer([100, 200, -5]), 200)
+
 
 if __name__ == "__main__":
     unittest.main()
