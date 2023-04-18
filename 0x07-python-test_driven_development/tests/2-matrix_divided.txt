@@ -51,3 +51,11 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 Traceback (most recent call last):
 	Ellipsis
 TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix_divided([[50]], None)
+Traceback (most recent call last):
+	Ellipsis
+TypeError: div must be a number
+>>> matrix_divided([[1, 2, 3]], True)
+Traceback (most recent call last):
+	Ellipsis
+TypeError: div must be a number
