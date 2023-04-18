@@ -22,3 +22,9 @@ TypeError: text_indentation() missing 1 required positional argument: 'text'
 <BLANKLINE>
 hi
 >>> text_indentation("")
+>>> text_indentation("hi.:        you")
+hi.
+<BLANKLINE>
+:
+<BLANKLINE>
+you

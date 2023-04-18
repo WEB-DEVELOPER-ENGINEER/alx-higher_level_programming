@@ -10,11 +10,18 @@ def text_indentation(text):
     """
     if type(text) != str:
         raise TypeError("text must be a string")
-    for c in range(len(text)):
-        if (text[c] == "." or text[c] == "?" or text[c] == ":"):
-            print(text[c], end='\n\n')
-        else:
-            if (c + 1 < len(text) and text[c + 1] == " "):
-                print(text[c].lstrip(), end=' ')
-            else:
-                print(text[c].lstrip(), end='')
+    lines = []
+    for line in text.splitlines():
+        line = line.strip()
+        if line:
+            lines.append(line)
+    text = " ".join(lines)
+    buff = ""
+    for c in text:
+        buff += c
+        if c in [".", "?", ":"]:
+            print(buff.strip())
+            print()
+            buff = ""
+    if buff:
+        print(buff.strip())
