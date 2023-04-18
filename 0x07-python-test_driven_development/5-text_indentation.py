@@ -15,13 +15,12 @@ def text_indentation(text):
         line = line.strip()
         if line:
             lines.append(line)
-    text = " ".join(lines)
+    text = "".join(lines)
     buff = ""
     for c in text:
         buff += c
         if c in [".", "?", ":"]:
             print(buff.strip())
-            print()
             print()
             buff = ""
     if buff:
