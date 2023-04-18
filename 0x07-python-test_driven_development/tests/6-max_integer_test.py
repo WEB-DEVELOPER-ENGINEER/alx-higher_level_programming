@@ -77,6 +77,12 @@ class TestMaxInteger(unittest.TestCase):
         '''
         self.assertEqual(max_integer([100, 50, 20, 2]), 100)
 
+    def test_end(self):
+        '''
+            Test for when the max is at the end
+        '''
+        self.assertEqual(max_integer([100, 50, 20, 200]), 200)
+
 
 if __name__ == "__main__":
     unittest.main()
