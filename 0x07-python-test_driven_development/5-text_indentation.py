@@ -22,6 +22,7 @@ def text_indentation(text):
         if c in [".", "?", ":"]:
             print(buff.strip())
             print()
+            print()
             buff = ""
     if buff:
         print(buff.strip())
