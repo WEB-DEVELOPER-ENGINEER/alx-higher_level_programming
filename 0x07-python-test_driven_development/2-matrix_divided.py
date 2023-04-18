@@ -34,4 +34,4 @@ def matrix_divided(matrix, div):
         return mat
     else:
         raise TypeError("matrix must be a matrix (list of lists)"
-                        "of integers/floats")
+                        " of integers/floats")

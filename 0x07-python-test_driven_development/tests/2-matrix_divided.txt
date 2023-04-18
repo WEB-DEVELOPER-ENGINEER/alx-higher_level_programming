@@ -47,3 +47,7 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 [[1.25, 2.75, 5.25]]
 >>> matrix_divided([[2.0, 5.0, 10.0]], 2)
 [[1.0, 2.5, 5.0]]
+>>> matrix_divided('d', 2)
+Traceback (most recent call last):
+	Ellipsis
+TypeError: matrix must be a matrix (list of lists) of integers/floats
