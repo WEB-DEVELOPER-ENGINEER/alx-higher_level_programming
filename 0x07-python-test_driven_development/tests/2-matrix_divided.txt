@@ -69,3 +69,5 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 Traceback (most recent call last):
 	Ellipsis
 TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix_divided([[1, 2, 3], [5, 2, 8], [1, 45, 89]], 7)
+[[0.14, 0.29, 0.43], [0.71, 0.29, 1.14], [0.14, 6.43, 12.71]]
