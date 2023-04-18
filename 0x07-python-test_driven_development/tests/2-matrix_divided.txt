@@ -65,3 +65,7 @@ TypeError: div must be a number
 Traceback (most recent call last):
 	Ellipsis
 TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix_divided([1, [2, 3], [5, 2, 8]], 7)
+Traceback (most recent call last):
+	Ellipsis
+TypeError: matrix must be a matrix (list of lists) of integers/floats
