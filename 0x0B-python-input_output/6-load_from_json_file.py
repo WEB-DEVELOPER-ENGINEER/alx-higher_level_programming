@@ -6,6 +6,6 @@
 import json
 
 
-def load_from_json_file(filename, encoding="utf-8"):
-    with open(filename, 'r') as f:
+def load_from_json_file(filename):
+    with open(filename) as f:
         return json.load(f)
