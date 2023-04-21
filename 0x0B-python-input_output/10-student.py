@@ -17,19 +17,15 @@ class Student:
 
     def to_json(self, attrs=None):
         '''
-            retrieves a dictionary representation of a Student instance
+            retrieves a dict representation of a Student instance
         '''
-        if attrs and type(attrs) == list:
-            if not all(isinstance(attr, str) for attr in attrs):
-                return self.__dict__
-            else:
-                odict = self.__dict__
-                if all(attr not in odict for attr in attrs):
-                    return self.__dict__
-                redict = {}
-                for key in self.__dict__:
-                    if key in attrs:
-                        redict[key] = odict[key]
-                return redict
+        odict = {}
+        if type(attrs) == list and all(isinstance(j, str) for j in attrs):
+            for i in attrs:
+                try:
+                    odict[i] = getattr(self, i)
+                except Exception:
+                    pass
         else:
-            return self.__dict__
+            odict = self.__dict__
+        return odict
