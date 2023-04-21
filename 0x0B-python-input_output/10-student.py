@@ -24,6 +24,8 @@ class Student:
                 return self.__dict__
             else:
                 odict = self.__dict__
+                if all(attr not in odict for attr in attrs):
+                    return self.__dict__
                 redict = {}
                 for key in self.__dict__:
                     if key in attrs:
