@@ -19,16 +19,15 @@ class Student:
         '''
             retrieves a dictionary representation of a Student instance
         '''
-        if attrs:
+        if attrs and type(attrs) == list:
             if not all(isinstance(attr, str) for attr in attrs):
                 return self.__dict__
             else:
                 odict = self.__dict__
                 redict = {}
                 for key in self.__dict__:
-                    if type(odict[key]) in [list, dict, str, int, bool]:
-                        if key in attrs:
-                            redict[key] = odict[key]
+                    if key in attrs:
+                        redict[key] = odict[key]
                 return redict
         else:
             return self.__dict__
