@@ -26,8 +26,9 @@ class Student:
                 odict = self.__dict__
                 redict = {}
                 for key in self.__dict__:
-                    if key in attrs:
-                        redict[key] = odict[key]
+                    if type(odict[key]) in [list, dict, str, int, bool]:
+                        if key in attrs:
+                            redict[key] = odict[key]
                 return redict
         else:
             return self.__dict__
