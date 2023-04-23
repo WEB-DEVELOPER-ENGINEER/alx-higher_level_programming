@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 import sys
 import unittest
-sys.path.append('../models')
-from base import Base
+from models.base import Base
 """unittest for Base class
 """
 
