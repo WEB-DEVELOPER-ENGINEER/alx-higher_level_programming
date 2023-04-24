@@ -90,7 +90,7 @@ class Base:
     @classmethod
     def save_to_file_csv(cls, list_objs):
         '''
-            serializes and deserializes in CSV
+            serializes in CSV
         '''
         file_name = cls.__name__ + ".csv"
         with open(file_name, mode="w", newline='', encoding="UTF8") as f:
@@ -110,3 +110,10 @@ class Base:
                     string += (str(obj["id"]) + "," + str(obj["size"]) + "," +
                                str(obj["x"]) + "," + str(obj["y"]))
                     write_this.writerow(string)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        '''
+            deserializes in CSV
+        '''
+        return ([])
