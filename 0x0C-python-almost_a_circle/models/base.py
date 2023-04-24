@@ -45,3 +45,26 @@ class Base:
 
         with open(file_name, mode="w") as f:
             json.dump(string, f)
+
+    @staticmethod
+    def from_json_string(json_string):
+        '''
+             returns the list of the JSON string representation json_string
+        '''
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        '''
+            returns an instance with all attributes already set
+        '''
+        from rectangle import Rectangle
+        from square import Square
+        if cls.__name__ == "Rectangle":
+            dummy = Rectangle(3, 8)
+        elif cls.__name__ == "Square":
+            dummy = Square(5)
+        dummy.update(**dictionary)
+        return (dummy)
