@@ -86,34 +86,3 @@ class Base:
             tmp = cls.create(**instance)
             instances.append(tmp)
         return instances
-
-    @classmethod
-    def save_to_file_csv(cls, list_objs):
-        '''
-            serializes in CSV
-        '''
-        file_name = cls.__name__ + ".csv"
-        with open(file_name, mode="w", newline='', encoding="UTF8") as f:
-            write_this = csv.writer(f, delimiter=" ")
-            if cls.__name__ == "Rectangle":
-                for obj in list_objs:
-                    string = ""
-                    item = item.to_dictionary()
-                    string += (str(obj["id"]) + "," + str(obj["width"]) + "," +
-                               str(obj["height"]) + "," +
-                               str(obj["x"]) + "," + str(obj["y"]))
-                    write_this.writerow(string)
-            if cls.__name__ == "Square":
-                for obj in list_objs:
-                    string = ""
-                    obj = obj.to_dictionary()
-                    string += (str(obj["id"]) + "," + str(obj["size"]) + "," +
-                               str(obj["x"]) + "," + str(obj["y"]))
-                    write_this.writerow(string)
-
-    @classmethod
-    def load_from_file_csv(cls):
-        '''
-            deserializes in CSV
-        '''
-        return ([])
