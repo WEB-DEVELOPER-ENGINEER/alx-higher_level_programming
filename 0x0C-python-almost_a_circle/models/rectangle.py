@@ -51,3 +51,13 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         self.__y = value
+
+    @staticmethod
+    def setter_checker(attr, val):
+        if type(val) != int:
+            raise TypeError("{} must be an integer".format(attr))
+        if attr == "x" or attr == "y":
+            if val < 0:
+                raise ValueError("{} must be >= 0".format(attr))
+        elif val <= 0:
+            raise ValueError("{} must be > 0".format(attr))
