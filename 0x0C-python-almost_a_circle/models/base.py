@@ -60,8 +60,8 @@ class Base:
         '''
             returns an instance with all attributes already set
         '''
-        from rectangle import Rectangle
-        from square import Square
+        from models.rectangle import Rectangle
+        from models.square import Square
         if cls.__name__ == "Rectangle":
             dummy = Rectangle(3, 8)
         elif cls.__name__ == "Square":
