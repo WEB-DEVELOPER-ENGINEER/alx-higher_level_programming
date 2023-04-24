@@ -68,3 +68,20 @@ class Base:
             dummy = Square(5)
         dummy.update(**dictionary)
         return (dummy)
+
+    @classmethod
+    def load_from_file(cls):
+        '''
+            returns a list of instances
+        '''
+        file_name = cls.__name__ + ".json"
+        try:
+            with open(file_name, encoding="UTF8") as f:
+                string = cls.from_json_string(f.read())
+        except Exception:
+            return []
+        instances = []
+        for instance in string:
+            tmp = cls.create(**instance)
+            instances.append(tmp)
+        return instances
