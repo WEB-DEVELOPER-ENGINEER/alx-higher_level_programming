@@ -115,14 +115,16 @@ class Base:
     @classmethod
     def load_from_file_csv(cls):
         """deserializes in CSV"""
-        new_list = []
         file_name = cls.__name__ + '.csv'
-        if os.path.exists(file_name) is True:
-            with open(file_name, "r") as csvfile:
-                dictreader = csv.DictReader(csvfile)
-                new_list = [dict([key, int(value)] for key, value
-                                in dictionary.items()) for dictionary
-                           in dictreader]
-            for i in range(len(new_list)):
-                new_list[i] = cls.create(**new_list[i])
-        return new_list
+        try:
+            with open(filename, "r", newline="") as csvfile:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ["id", "width", "height", "x", "y"]
+                else:
+                    fieldnames = ["id", "size", "x", "y"]
+                list_dicts = csv.DictReader(csvfile, fieldnames=fieldnames)
+                list_dicts = [dict([k, int(v)] for k, v in d.items())
+                              for d in list_dicts]
+                return [cls.create(**d) for d in list_dicts]
+        except IOError:
+            return []
