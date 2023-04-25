@@ -111,25 +111,3 @@ class Base:
                     string += (str(obj["id"]) + "," + str(obj["size"]) + "," +
                                str(obj["x"]) + "," + str(obj["y"]))
                     write_this.writerow(string)
-
-    @classmethod
-    def load_from_file_csv(cls):
-        """deserializes in CSV"""
-        filename = cls.__name__ + ".csv"
-        my_obj = []
-        try:
-            with open(filename, 'r') as f:
-                csv_reader = csv.reader(f)
-                for elm in csv_reader:
-                    if cls.__name__ == "Rectangle":
-                        dictionary = {"id": int(elm[0]), "width": int(elm[1]),
-                                      "height": int(elm[2]), "x": int(elm[3]),
-                                      "y": int(elm[4])}
-                    elif cls.__name__ == "Square":
-                        dictionary = {"id": int(elm[0]), "size": int(elm[1]),
-                                      "x": int(elm[2]), "y": int(elm[3])}
-                    obj = cls.create(**dictionary)
-                    my_obj.append(obj)
-        except Exception:
-            pass
-        return(my_obj)
