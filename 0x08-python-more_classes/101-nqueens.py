@@ -32,12 +32,16 @@ def nqueens(N):
                 board[row] = col
                 place_queens(row + 1)
 
-    # Helper function to print the board in the required format
     def print_board(board):
+        '''
+            Helper function to print the board in the required format
+        '''
         print([[row, col] for row, col in enumerate(board)])
 
-    # Helper function to check if a queen can be placed in a given position
     def is_valid_position(board, row, col):
+        '''
+            function to check if a queen can be placed in a given position
+        '''
         # Check the rows above
         for r in range(row):
             if board[r] == col or abs(board[r] - col) == row - r:
