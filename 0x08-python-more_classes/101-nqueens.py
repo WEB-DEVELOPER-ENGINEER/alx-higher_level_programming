@@ -7,7 +7,9 @@ import sys
 
 
 def nqueens(N):
-    # Check that N is a valid integer
+    '''
+        Check that N is a valid integer
+    '''
     if not isinstance(N, int) or N < 4:
         print("N must be an integer greater or equal to 4")
         sys.exit(1)
@@ -15,9 +17,11 @@ def nqueens(N):
     # Initialize the board as an empty list of N lists
     board = [0] * N
 
-    # Recursive function to place queens on the board
     def place_queens(row):
-        # If we've placed all N queens, print the board and return
+        '''
+            Recursive function to place queens on the board.
+            If we've placed all N queens, print the board and return
+        '''
         if row == N:
             print_board(board)
             return
