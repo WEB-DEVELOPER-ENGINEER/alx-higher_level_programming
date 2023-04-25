@@ -11,7 +11,7 @@ def nqueens(N):
         Check that N is a valid integer
     '''
     if not isinstance(N, int) or N < 4:
-        print("N must be an integer greater or equal to 4")
+        print("N must be at least 4")
         sys.exit(1)
 
     # Initialize the board as an empty list of N lists
