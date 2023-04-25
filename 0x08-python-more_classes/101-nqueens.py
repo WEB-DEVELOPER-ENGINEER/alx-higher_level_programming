@@ -45,6 +45,8 @@ def nqueens(N):
     place_queens(0)
 
 # Check that the program was called with the correct number of arguments
+
+
 if len(sys.argv) != 2:
     print("Usage: nqueens N")
     sys.exit(1)
