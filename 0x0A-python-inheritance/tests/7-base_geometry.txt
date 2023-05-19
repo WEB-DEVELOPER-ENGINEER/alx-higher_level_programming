@@ -22,3 +22,10 @@ TypeError: integer_validator() missing 1 required positional argument: 'value'
 >>> docstr = bg.__doc__
 >>> len(docstr) > 1
 True
+>>> f = __import__('7-base_geometry').BaseGeometry.integer_validator.__doc__
+>>> len(f) > 1
+True
+>>> bg.integer_validator("string", 10.89)
+Traceback (most recent call last):
+	...
+TypeError: string must be an integer
