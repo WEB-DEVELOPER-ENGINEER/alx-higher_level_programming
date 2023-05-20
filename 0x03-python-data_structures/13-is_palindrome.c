@@ -10,12 +10,13 @@
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *temp1 = *head;
+	listint_t *temp1;
 	listint_t *temp2;
 	listint_t *temp3;
 
 	if (head && *head)
 	{
+		temp1 = *head;
 		while (temp1->next)
 		{
 			temp1 = temp1->next;
