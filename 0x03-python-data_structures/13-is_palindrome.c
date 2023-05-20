@@ -29,7 +29,6 @@ int is_palindrome(listint_t **head)
 				;
 			temp1 = temp3;
 		}
-		return (1);
 	}
-	return (0);
+	return (1);
 }
