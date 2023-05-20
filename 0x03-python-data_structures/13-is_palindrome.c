@@ -33,6 +33,6 @@ int is_palindrome(listint_t **head)
 		}
 	}
 	else
-		return (0)
+		return (0);
 	return (1);
 }
