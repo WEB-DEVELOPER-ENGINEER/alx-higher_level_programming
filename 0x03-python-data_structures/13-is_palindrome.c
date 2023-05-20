@@ -11,25 +11,78 @@
 
 int is_palindrome(listint_t **head)
 {
-	int arr[1000];
-	listint_t *current = *head;
-	int i = 0;
-	int left = 0;
-	int right;
+	listint_t *h, *f_half, *s_half, *temp = NULL;
+	int i = 0, j, c = 0;
 
-	while (current)
+	if (head && *head)
 	{
-		arr[i] = current->n;
-		current = current->next;
-		i++;
-	}
-	right = i - 1;
-	while (left < right)
-	{
-		if (arr[left] != arr[right])
-			return (0);
-		left++;
-		right--;
+		h = *head;
+		if (!h->next)
+			return (1);
+		while (h->next)
+		{
+			h = h->next;
+			i++;
+		}
+		h = *head;
+		if ((i + 1) % 2 == 0)
+		{
+			j = i / 2;
+			f_half = *head;
+			for (s_half = *head; c < j; c++)
+			{
+				s_half = s_half->next;
+				f_half = f_half->next;
+			}
+			s_half = s_half->next;
+			f_half->next = NULL;
+			f_half = *head;
+			while(f_half)
+			{
+				h = f_half->next;
+				f_half->next = temp;
+				temp = f_half;
+				f_half = h;
+			}
+			f_half = temp;
+			while (f_half && s_half)
+			{
+				if (f_half->n != s_half->n)
+					return (0);
+				f_half = f_half->next;
+				s_half = s_half->next;
+			}
+			return (1);
+		}
+		else
+                {
+                        j = (i) / 2;
+                        f_half = *head;
+                        for (s_half = *head; c < j - 1; c++)
+                        {
+                                s_half = s_half->next;
+                                f_half = f_half->next;
+                        }
+                        s_half = s_half->next->next;
+                        f_half->next = NULL;
+                        f_half = *head;
+                        while(f_half)
+                        {
+                                h = f_half->next;
+                                f_half->next = temp;
+                                temp = f_half;
+                                f_half = h;
+                        }
+                        f_half = temp;
+                        while (f_half && s_half)
+                        {
+				if (f_half->n != s_half->n)
+                                        return (0);
+                                f_half = f_half->next;
+                                s_half = s_half->next;
+                        }
+                        return (1);
+		}
 	}
 	return (1);
 }

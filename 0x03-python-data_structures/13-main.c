@@ -9,9 +9,10 @@
  */
 int main(void)
 {
-    listint_t *head;
+	listint_t *head;
 
     head = NULL;
+
     if (is_palindrome(&head) == 1)
         printf("Linked list is a palindrome\n");
     else
