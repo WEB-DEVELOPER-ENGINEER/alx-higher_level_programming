@@ -1,3 +1,4 @@
+#include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
@@ -10,20 +11,12 @@
 
 int is_palindrome(listint_t **head)
 {
+	int arr[1000];
 	listint_t *current = *head;
 	int i = 0;
 	int left = 0;
 	int right;
 
-	while (current)
-	{
-		current = current->next;
-		i++;
-	}
-	int arr[i];
-
-	i = 0;
-	current = *head;
 	while (current)
 	{
 		arr[i] = current->n;
