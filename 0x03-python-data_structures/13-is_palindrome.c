@@ -21,12 +21,14 @@ int is_palindrome(listint_t **head)
 		{
 			temp1 = temp1->next;
 		}
-		for (temp2 = *head; temp2 != temp1 && temp2->next; temp2 = temp2->next)
+		for (temp2 = *head; temp2 != temp1; temp2 = temp2->next)
 		{
 			if (temp2->n != temp1->n)
 				return (0);
 			for (temp3 = *head; temp3->next != temp1; temp3 = temp3->next)
 				;
+			if (temp2 == temp3)
+				break;
 			temp1 = temp3;
 		}
 	}
