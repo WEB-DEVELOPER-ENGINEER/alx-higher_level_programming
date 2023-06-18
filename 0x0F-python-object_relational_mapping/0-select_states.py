@@ -7,6 +7,8 @@ database `hbtn_0e_0_usa`.
 
 import MySQLdb
 from sys import argv
+
+
 if __name__ == '__main__':
     """
     Access to the database and get the states
@@ -18,3 +20,5 @@ if __name__ == '__main__':
     rows = cur.fetchall()
     for row in rows:
         print(row)
+    cursor.close()
+    db.close()
