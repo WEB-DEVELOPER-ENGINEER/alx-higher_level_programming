@@ -29,4 +29,4 @@ if __name__ == "__main__":
     username = sys.argv[1]
     passwd = sys.argv[2]
     db_name = sys.argv[3]
-    get_states(username, passwd, db_name)
+    list_states(username, passwd, db_name)
