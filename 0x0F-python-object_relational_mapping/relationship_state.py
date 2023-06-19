@@ -4,6 +4,7 @@ from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 from relationship_city import Base, City
 
+
 class State(Base):
     """Class to states table"""
 
