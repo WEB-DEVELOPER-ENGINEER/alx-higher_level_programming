@@ -3,6 +3,7 @@
 All states via SQLAlchemy
 """
 
+
 from sys import argv
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
