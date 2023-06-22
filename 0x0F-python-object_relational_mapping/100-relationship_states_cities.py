@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Database hbtn_0e_100_usa"""
 from relationship_state import State, Base
 from relationship_city import City
 from sqlalchemy.orm import sessionmaker, relationship
