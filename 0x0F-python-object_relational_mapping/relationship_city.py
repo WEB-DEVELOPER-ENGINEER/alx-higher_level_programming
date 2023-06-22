@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 from sqlalchemy import Column, ForeignKey, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
 from relationship_state import Base
 
 
