@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-from relationship_state import State
-from relationship_city import City, Base
+from relationship_state import State, Base
+from relationship_city import City
 from sqlalchemy.orm import sessionmaker, relationship
 from sqlalchemy import create_engine
 import sys
