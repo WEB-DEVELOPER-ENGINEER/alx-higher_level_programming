@@ -15,7 +15,7 @@ if __name__ == "__main__":
                                                             sys.argv[2],
                                                             sys.argv[3])
 
-    engine = create_engine(db_uri, pool_pre_ping=True)
+    engine = create_engine(db_uri)
     Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
