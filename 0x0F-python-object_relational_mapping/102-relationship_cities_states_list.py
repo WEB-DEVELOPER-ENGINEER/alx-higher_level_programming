@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-from relationship_state import Base
 from relationship_city import City
 from sqlalchemy.orm import sessionmaker, relationship
 from sqlalchemy import create_engine
