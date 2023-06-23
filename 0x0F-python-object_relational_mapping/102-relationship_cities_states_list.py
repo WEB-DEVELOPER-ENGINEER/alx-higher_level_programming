@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""script"""
+from relationship_state import State, Base
 from relationship_city import City
 from sqlalchemy.orm import sessionmaker, relationship
 from sqlalchemy import create_engine
