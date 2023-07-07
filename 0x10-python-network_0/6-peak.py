@@ -2,7 +2,7 @@
 """Finds a peak in a list of unsorted integers"""
 
 
-def find_peak(list_of_integers):
+def find_peak(nums):
 	"""Finds a peak in list_of_integers"""
     length = len(nums)
     if length == 0:
