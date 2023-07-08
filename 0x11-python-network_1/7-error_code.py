@@ -1,11 +1,14 @@
 #!/usr/bin/python3
-"""Sends a request to a given URL"""
+"""Sends a request to a url"""
 import sys
 import requests
 
 
 if __name__ == "__main__":
-    if requests.get(sys.argv[1]).status_code >= 400:
-        print("Error code: {}".format(requests.get(url).status_code))
+    url = sys.argv[1]
+
+    r = requests.get(url)
+    if r.status_code >= 400:
+        print("Error code: {}".format(r.status_code))
     else:
-        print(requests.get(url).text)
+        print(r.text)
